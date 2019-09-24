@@ -52,17 +52,18 @@ def login(email,password):
 
 def main():
 
-	if (len(sys.argv)!=3):
+	#if (len(sys.argv)!=3):
 
-		print("Please provide Email and Password as arguments")
+		#print("Please provide Email and Password as arguments")
 
-	else:
+	#else:
 
-		print("\n**** Login Initiated ****\n")
-
-		email = sys.argv[1]
-
-		password = sys.argv[2]
+		#print("\n**** Login Initiated ****\n")
+		email = "tommie1989@gmail.com"
+		
+		#email = sys.argv[1]
+		password = "forever199193"
+		#password = sys.argv[2]
 
 		login(email,password)
 
