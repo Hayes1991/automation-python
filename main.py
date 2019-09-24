@@ -12,8 +12,7 @@ fp.set_preference("http.response.timeout", 5)
 fp.set_preference("dom.max_script_run_time", 5)
 driver = webdriver.Firefox(firefox_profile=fp)
 
-#wait = WebDriverWait(driver, 10)
-#wait.until(lambda driver: driver.current_url == "https://mail.yahoo.com")
+
 driver.get('https://login.yahoo.com/?.src=ym&.lang=en-US&.intl=us&.done=https%3A%2F%2Fmail.yahoo.com%2Fd%3F.src%3Dfp')
 
 driver.find_element_by_id('login-username').click()
@@ -24,7 +23,6 @@ driver.find_element_by_id('login-username').send_keys("inafonar7721@yahoo.com")
 
 driver.find_element_by_id('login-signin').click()
 
-#wait = WebDriverWait(driver, 1000)
 #driver.get('https://login.yahoo.com/account/challenge/password?.src=ym&.lang=en-US&.intl=us&authMechanism=primary&display=login&done=https%3A%2F%2Fmail.yahoo.com%2Fd%3F.src%3Dfp&sessionIndex=QQ--&acrumb=YM4ilVw9')
 driver.set_page_load_timeout(5)
 time.sleep(5)
@@ -52,3 +50,5 @@ mailboxes.click()
 time.sleep(5)
 mailboxes_list = driver.find_element_by_xpath("//li[contains(@data-test-id,'accounts-list-item')]")
 mailboxes_list.click()
+
+driver.quit()
